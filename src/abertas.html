@@ -1,0 +1,283 @@
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>Concorrencia | Eshows</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+
+
+<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+<link rel="stylesheet" href="https://cdn.rawgit.com/jgthms/bulma/master/css/bulma.min.css">
+
+<link rel="stylesheet" href="css/index.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css">
+
+</head>
+<body>
+<nav class="navbar" role="navigation" aria-label="main navigation">
+	<div class="navbar-brand">
+			<a class="navbar-item" href="/">
+					<img src="img/logo.png" width="112" height="28">
+			</a>
+
+			<a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+					<span aria-hidden="true"></span>
+					<span aria-hidden="true"></span>
+					<span aria-hidden="true"></span>
+			</a>
+	</div>
+
+	<div id="navbarBasicExample" class="navbar-menu">
+			<div class="navbar-end">
+					<a href="/" class="navbar-item">
+							Abertas
+					</a>
+
+					<a class="navbar-item">
+							Fechadas
+					</a>
+					<a class="navbar-item">
+						Eshows
+				</a>
+					<a class="navbar-item">
+						Seja um Artista Eshows
+				</a>
+				
+
+					<!--       <div class="navbar-item has-dropdown is-hoverable" id="internal-menu"> -->
+					<div class="navbar-item has-dropdown is-hoverable" id="internal-menu">
+							<a class="navbar-link">
+									Mais
+							</a>
+
+							<div class="navbar-dropdown">
+									
+									<!-- <a class="navbar-item">
+											Contact
+									</a> -->
+									<!-- <hr class="navbar-divider"> -->
+									<a class="navbar-item">
+											Publicar
+									</a>
+							</div>
+					</div>
+			</div>
+
+			
+	</div>
+</nav>
+
+<main>
+
+	<!-- <div class="field is-horizontal">
+			<label class="field-label">Name</label>
+			<div class="field-body control">
+					<input class="input" type="text" placeholder="Text input">
+			</div>
+	</div>
+	<div class="field is-horizontal">
+			<label class="field-label">Name</label>
+			<div class="field-body control">
+					<input class="input" type="text" placeholder="Text input">
+			</div>
+	</div>
+
+	
+
+	<div class="field is-grouped">
+			<div class="control">
+					<button class="button is-link">Publicar</button>
+			</div>
+			<div class="control">
+					<button class="button is-text">Cancelar</button>
+			</div>
+	</div> -->
+
+
+<!-- cover -->
+	<div class="columns" id="cover">
+			<div class="column">
+					<div class="circle">
+						<h1>1</h1>
+					</div>
+					<p>O cliente publica a oportunidade</p>
+			</div>
+			<div class="column">
+				<div class="circle">
+					<h1>2</h1>
+				</div>
+					<p>Artista escolhe e se candidata</p>
+			</div>
+			<div class="column">
+				<div class="circle">
+					<h1>3</h1>
+				</div>
+					<p>O cliente recebe os perfis Eshows dos candidatos</p>
+			</div>
+			<div class="column">
+				<div class="circle">
+					<h1>4</h1>
+				</div>
+					<p>O cliente escolhe o artista e enviar a proposta pela plataforma</p>
+			</div>
+	</div> 
+
+<!-- opportunities -->
+
+<div class="columns is-multiline" id="oppo">
+
+	<article class="column is-3">
+		<div class="article-header">
+			<h4>Concorrencia n <strong>1</strong></h4>
+		</div>
+		<p><i class="fas fa-microphone-alt"></i> R$ <strong>1000,00</strong></p>	
+		<p><i class="fas fa-money-bill-alt"></i> Banda completa</p>
+		<p><i class="fas fa-map-marker-alt"></i> Vila Olimpia</p>
+		<p><i class="fab fa-itunes-note"></i> Sertanejo</p>
+		<p><i class="fas fa-map-marked-alt"></i> 18:00 as 20:00</p>
+		<p><i class="fas fa-calendar-alt"></i> 21/02/2020</p>
+		<p><i class="fas fa-clock"></i> Casamento</p>
+		<div class="article-footer">
+			<button class="button is-warning" onclick="participate(1)">Participar</button>
+		</div>
+	</article>
+
+	<article class="column is-3">
+		<div class="article-header">
+			<h4>Concorrencia n <strong>33</strong></h4>
+		</div>
+		<p><i class="fas fa-microphone-alt"></i> R$ <strong>1000,00</strong></p>	
+		<p><i class="fas fa-money-bill-alt"></i> Banda completa</p>
+		<p><i class="fas fa-map-marker-alt"></i> Vila Olimpia</p>
+		<p><i class="fab fa-itunes-note"></i> Sertanejo</p>
+		<p><i class="fas fa-map-marked-alt"></i> 18:00 as 20:00</p>
+		<p><i class="fas fa-calendar-alt"></i> 21/02/2020</p>
+		<p><i class="fas fa-clock"></i> Casamento</p>
+		<div class="article-footer">
+			<button class="button is-warning" onclick="participate(33)">Participar</button>
+		</div>
+	</article>
+		
+
+</div>
+
+</main>
+<div class="places">	
+<h3>Quem são os clientes que abrem as oportunidades?</h3>
+<section class="section">
+	<div class="container">
+<!-- Start Carousel -->
+<div id="carousel-demo" class="carousel">
+	<div class="item-1">
+		<!-- Slide Content -->
+		<img src="https://www.eshows.com.br/assets/logos/bar-brahma-4de035f9c60aea4a60c5b1727e8f783ac40ce394d15e4db5ba69581d8aecbdad.png" alt="">					
+	</div>
+	<div class="item-2">
+		<!-- Slide Content -->
+		<img src="https://www.eshows.com.br/assets/logos/bardasse-d43dffcc34a9601c7014dbadfe14801483602561f74d976d8dfc5c1672e65e81.png" alt="">  
+	</div>
+	<div class="item-3">
+		<!-- Slide Content -->
+		<img src="https://www.eshows.com.br/assets/logos/piratininga-eb3096a8d099590cfe0512a9b34df4c8e9c4797e1e04f283cb9891a6e8ea8e47.png" alt="">
+	</div>
+	<div class="item-4">
+		<!-- Slide Content -->
+		<img src="https://www.eshows.com.br/assets/logos/quintal-espeto-da93cd3cb341fa0648925f709c1993d974dcd38ad7817098f0c631bc2c63b004.png" alt="">					
+	</div>
+	<div class="item-5">
+		<!-- Slide Content -->
+		<img src="https://www.eshows.com.br/assets/logos/espetto-carioca-8343de590dd66f547653548dc559411f5f28d9cfa7210913ce50986c60a533c8.png" alt="">  
+	</div>
+	<div class="item-6">
+		<!-- Slide Content -->
+		<img src="https://www.eshows.com.br/assets/logos/bar-das-patroas-4da6ec833cd253173c3d17301a3c51a646e0b81be99b018fdfcd879ee5f38864.png" alt="">
+	</div>
+</div>
+<!-- End Carousel -->
+	</div>
+	</section>
+</div>
+
+<footer>
+	ESHOWS® | © Todos os direitos reservados - 2015 - 2020
+</footer>
+
+
+<div class="modal">
+	<div class="modal-background"></div>
+	<div class="modal-card">
+	  <header class="modal-card-head">
+		<p class="modal-card-title">Concorrência <strong id="preview"></strong></p>
+		<button class="delete" aria-label="close" onclick="participate()"></button>
+	  </header>
+	  <section class="modal-card-body">
+		<div class="field">
+			<label class="label">Nome</label>
+			<div class="control">
+			  <input class="input" type="text" name="name" placeholder="Artista/Banda">
+			</div>
+			<p class="help"></p>
+		</div>
+		<div class="field">
+			<label class="label">Email</label>
+			<div class="control">
+			  <input class="input" type="email" name="email" placeholder="Email">
+			</div>
+			<p class="help"></p>
+		</div>
+		<div class="field">
+			<label class="label">Telefone</label>
+			<div class="control">
+			  <input class="input" type="tel" name="phone" placeholder="Telefone">
+			</div>
+			<p class="help"></p>
+		</div>
+		<div class="field">
+			<label class="label">Link</label>
+			<div class="control">
+			  <input class="input" type="text" name="phone" placeholder="https://www.eshows.com.br/artistas/MEU-ARTISTA">
+			</div>
+			<p class="help"></p>
+		</div>
+	  </section>
+	  <footer class="modal-card-foot">
+		<button class="button is-success">Participar</button>
+		<button class="button" onclick="participate()">Cancelar</button>
+	  </footer>
+	</div>
+  </div>
+
+<script>
+
+	function participate(n){
+		console.log(n)
+
+		document.querySelector('.modal').classList.toggle("is-active")
+		document.querySelector('#preview').innerHTML = n
+	}
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"></script>
+	<script>
+	bulmaCarousel.attach('#carousel-demo', {
+		slidesToScroll: 1,
+		slidesToShow: 4,
+	loop: true,
+autoplay: true,
+duration: 300,
+});
+	</script>
+
+
+
+<script src="js/menu.js"></script>
+<script src="js/load.js"></script>
+</body>
+
+</html>
+
