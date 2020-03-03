@@ -1,7 +1,10 @@
 /* global */
 body{
 font-family: 'Roboto', sans-serif;
+max-width: 100%;
 }
+
+
 
 /* oppo */
 #oppo svg{
@@ -24,7 +27,7 @@ text-align: center;
 margin-bottom: 20px;
 }
 #oppo .is-3{
-padding: 20px 40px;
+/* padding: 20px 40px; */
 justify-content: center;
 align-items: center;
 }
@@ -56,9 +59,19 @@ padding: 10px 50px;
     background-attachment: fixed;
 
     min-height: 300px;
-    padding: 80px 20;
+    padding: 80px 0;
     text-align: center;
+
+    box-sizing: border-box;
 }
+
+@media screen and (max-width: 767px) {
+  .columns {
+    margin: 0 !important
+    }   
+}
+
+
 .places h3 {
 font-size: 26px;
 text-align: center;
@@ -74,5 +87,4 @@ font-size: 12px;
 color: #333333;
 padding: 10px 0;
 background-color: #F7F7F7;
-margin-top: 40px;
 }
