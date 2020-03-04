@@ -18,84 +18,11 @@
 
 </head>
 <body>
-<nav class="navbar" role="navigation" aria-label="main navigation">
-	<div class="navbar-brand">
-			<a class="navbar-item" href="/">
-					<img src="img/logo.png" width="112" height="28">
-			</a>
 
-			<a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-					<span aria-hidden="true"></span>
-					<span aria-hidden="true"></span>
-					<span aria-hidden="true"></span>
-			</a>
-	</div>
+{% include "nav.html" %}
 
-	<div id="navbarBasicExample" class="navbar-menu">
-			<div class="navbar-end">
-					<a href="/" class="navbar-item">
-							Abertas
-					</a>
-
-					<a class="navbar-item">
-							Fechadas
-					</a>
-					<a class="navbar-item">
-						Eshows
-				</a>
-					<a class="navbar-item">
-						Seja um Artista Eshows
-				</a>
-				
-
-					<!--       <div class="navbar-item has-dropdown is-hoverable" id="internal-menu"> -->
-					<div class="navbar-item has-dropdown is-hoverable" id="internal-menu">
-							<a class="navbar-link">
-									Mais
-							</a>
-
-							<div class="navbar-dropdown">
-									
-									<!-- <a class="navbar-item">
-											Contact
-									</a> -->
-									<!-- <hr class="navbar-divider"> -->
-									<a class="navbar-item">
-											Publicar
-									</a>
-							</div>
-					</div>
-			</div>
-
-			
-	</div>
-</nav>
 
 <main>
-
-	<!-- <div class="field is-horizontal">
-			<label class="field-label">Name</label>
-			<div class="field-body control">
-					<input class="input" type="text" placeholder="Text input">
-			</div>
-	</div>
-	<div class="field is-horizontal">
-			<label class="field-label">Name</label>
-			<div class="field-body control">
-					<input class="input" type="text" placeholder="Text input">
-			</div>
-	</div>
-
-	
-
-	<div class="field is-grouped">
-			<div class="control">
-					<button class="button is-link">Publicar</button>
-			</div>
-			<div class="control">
-					<button class="button is-text">Cancelar</button>
-			</div>
-	</div> -->
 
 
 <!-- cover -->
@@ -134,33 +61,21 @@
 		<div class="article-header">
 			<h4>Concorrencia n <strong>1</strong></h4>
 		</div>
-		<p><i class="fas fa-microphone-alt"></i> R$ <strong>1000,00</strong></p>	
-		<p><i class="fas fa-money-bill-alt"></i> Banda completa</p>
-		<p><i class="fas fa-map-marker-alt"></i> Vila Olimpia</p>
-		<p><i class="fab fa-itunes-note"></i> Sertanejo</p>
-		<p><i class="fas fa-map-marked-alt"></i> 18:00 as 20:00</p>
-		<p><i class="fas fa-calendar-alt"></i> 21/02/2020</p>
-		<p><i class="fas fa-clock"></i> Casamento</p>
+		<div class="article-body">
+			<p><i class="fas fa-microphone-alt"></i> R$ <strong>1000,00</strong></p>	
+			<p><i class="fas fa-money-bill-alt"></i> Banda completa</p>
+			<p><i class="fas fa-map-marker-alt"></i> Vila Olimpia</p>
+			<p><i class="fab fa-itunes-note"></i> Sertanejo</p>
+			<p><i class="fas fa-map-marked-alt"></i> 18:00 as 20:00</p>
+			<p><i class="fas fa-calendar-alt"></i> 21/02/2020</p>
+			<p><i class="fas fa-clock"></i> Casamento</p>
+		</div>
 		<div class="article-footer">
 			<button class="button is-warning" onclick="participate(1)">Participar</button>
 		</div>
 	</article>
 
-	<article class="column is-3">
-		<div class="article-header">
-			<h4>Concorrencia n <strong>33</strong></h4>
-		</div>
-		<p><i class="fas fa-microphone-alt"></i> R$ <strong>1000,00</strong></p>	
-		<p><i class="fas fa-money-bill-alt"></i> Banda completa</p>
-		<p><i class="fas fa-map-marker-alt"></i> Vila Olimpia</p>
-		<p><i class="fab fa-itunes-note"></i> Sertanejo</p>
-		<p><i class="fas fa-map-marked-alt"></i> 18:00 as 20:00</p>
-		<p><i class="fas fa-calendar-alt"></i> 21/02/2020</p>
-		<p><i class="fas fa-clock"></i> Casamento</p>
-		<div class="article-footer">
-			<button class="button is-warning" onclick="participate(33)">Participar</button>
-		</div>
-	</article>
+	
 		
 
 </div>
@@ -170,6 +85,7 @@
 <h3>Quem são os clientes que abrem as oportunidades?</h3>
 <section class="section">
 	<div class="container">
+	<img src="img/places.png" alt="">
 <!-- Start Carousel -->
 <!-- <div id="carousel-demo" class="carousel">
 	<div class="item-1">
