@@ -57,12 +57,12 @@
 
 <div class="columns is-multiline" id="oppo">
 
-	<article class="column is-3">
+	{# <article class="column is-3">
 		<div class="article-header">
 			<h4>Concorrencia n <strong>1</strong></h4>
 		</div>
 		<div class="article-body">
-			<p><i class="fas fa-microphone-alt"></i> R$ <strong>1000,00</strong></p>	
+			<p><i class="fas fa-microphone-alt"></i> R$ <strong>{{Cache}}</strong></p>	
 			<p><i class="fas fa-money-bill-alt"></i> Banda completa</p>
 			<p><i class="fas fa-map-marker-alt"></i> Vila Olimpia</p>
 			<p><i class="fab fa-itunes-note"></i> Sertanejo</p>
@@ -73,7 +73,27 @@
 		<div class="article-footer">
 			<button class="button is-warning" onclick="participate(1)">Participar</button>
 		</div>
+	</article> #}
+
+	{% for item in oppos %}
+    <article class="column is-3">
+		<div class="article-header">
+			<h4>Concorrencia n <strong>1</strong></h4>
+		</div>
+		<div class="article-body">
+			<p><i class="fas fa-microphone-alt"></i> R$ <strong>{{Cache}}</strong></p>	
+			<p><i class="fas fa-money-bill-alt"></i> Banda completa</p>
+			<p><i class="fas fa-map-marker-alt"></i> Vila Olimpia</p>
+			<p><i class="fab fa-itunes-note"></i> Sertanejo</p>
+			<p><i class="fas fa-map-marked-alt"></i> 18:00 às 20:00</p>
+			<p><i class="fas fa-calendar-alt"></i> 21/02/2020</p>
+			<p><i class="fas fa-clock"></i> Casamento</p>
+		</div>
+		<div class="article-footer">
+			<button class="button is-warning" onclick="participate(1)">Participar</button>
+		</div>
 	</article>
+	{% endfor %}
 
 	
 		
