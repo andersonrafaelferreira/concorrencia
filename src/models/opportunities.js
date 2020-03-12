@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const Opportunities = new mongoose.Schema(
   {
-    id: Number,
+    number: Number,
     status: String
     // Estilo: "Pagode",
     // Cache: "1.200,00",

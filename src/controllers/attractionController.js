@@ -9,7 +9,6 @@ class AttractionController {
   async store(req, res) {
     const { opportunity_number, name, email, phone, url, video } = req.body;
 
-    console.log(req.body.id);
     const newAttraction = await Attraction.create({
       opportunity_number,
       name,

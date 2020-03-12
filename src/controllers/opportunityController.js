@@ -1,21 +1,43 @@
 const Oppo = require("../models/opportunities");
+const Attraction = require("../models/attraction");
 
 class OppoController {
   async index(req, res) {
-    const allOppo = await Oppo.find({});
+    const opportunities = await Oppo.find({});
 
-    res.send(allOppo);
+    // return res.render("fechadas.html", { opportunities });
+    return res.render("abertas.html", { opportunities });
+  }
+  async closed(req, res) {
+    const opportunities = await Oppo.find({});
+
+    return res.render("fechadas.html", { opportunities });
+    // return res.render("abertas.html", { opportunities });
   }
   async store(req, res) {
-    // const { id, status } = req.body;
+    const { number, status } = req.body;
 
-    // console.log("aqui");
+    console.log(req.body.id);
     const newOppo = await Oppo.create({
-      id: 1,
-      status: "aberta"
+      number,
+      status
     });
 
-    res.send(newOppo);
+    return res.send(newOppo);
+  }
+
+  async show(req, res) {
+    const { id } = req.params;
+
+    const opportunity = await Oppo.findOne({
+      number: id
+    });
+    const att = await Attraction.find({
+      opportunity_number: id
+    });
+
+    console.log(opportunity, att);
+    return res.render("oportunidade.html", { opportunity, att });
   }
 }
 

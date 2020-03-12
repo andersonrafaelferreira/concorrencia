@@ -45,9 +45,9 @@
       <td><a href="https://en.wikipedia.org/wiki/Leicester_City_F.C." title="Leicester City F.C.">Leicester City</a> <strong>(C)</strong>
       </td>
     </tr> #}
-    {% for item in oppos %}
+    {% for item in opportunities %}
     <tr>
-        <th>{{ item.id }}</th>
+        <th>{{ item.number }}</th>
         {% if item.status === "Aberta" %}
         <td ><button class="button is-success">{{ item.status }}</button></td>
         {% elif item.status === "Cancelada" %}

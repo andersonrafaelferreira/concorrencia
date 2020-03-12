@@ -3,9 +3,7 @@ const express = require("express");
 const routes = express.Router();
 
 const OppoController = require("./controllers/opportunityController");
-
-// const TweetController = require("./controllers/TweetController");
-// const LikeController = require("./controllers/LikeController");
+const AttractionController = require("./controllers/attractionController");
 
 const oppos = [
   {
@@ -62,16 +60,19 @@ const oppos = [
   }
 ];
 
-routes.get("/", (req, res) => {
-  res.render("abertas.html", { oppos });
-});
+// routes.get("/", (req, res) => {
+//   res.render("abertas.html", { oppos });
+// });
+
+routes.get("/", OppoController.index);
+routes.get("/abertas/:id", OppoController.show);
+routes.post("/", AttractionController.store);
+
 // routes.get("/abrir", (req, res) => {
 //   res.render("nova.html");
 // });
 
-routes.get("/fechadas", (req, res) => {
-  res.render("fechadas.html", { oppos });
-});
+routes.get("/fechadas", OppoController.closed);
 
 routes.get("/abrir", OppoController.index);
 routes.post("/abrir", OppoController.store);

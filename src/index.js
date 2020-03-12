@@ -11,6 +11,9 @@ mongoose.connect(
 );
 
 app.use(express.static("public"));
+app.use(express.json());
+
+app.use(express.urlencoded({ extended: true }));
 
 const nunjucks = require("nunjucks");
 
