@@ -8,12 +8,14 @@ class OppoController {
     // return res.render("fechadas.html", { opportunities });
     return res.render("abertas.html", { opportunities });
   }
+
   async closed(req, res) {
     const opportunities = await Oppo.find({});
 
     return res.render("fechadas.html", { opportunities });
     // return res.render("abertas.html", { opportunities });
   }
+
   async store(req, res) {
     const { number, status } = req.body;
 

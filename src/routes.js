@@ -74,7 +74,9 @@ routes.post("/", AttractionController.store);
 
 routes.get("/fechadas", OppoController.closed);
 
-routes.get("/abrir", OppoController.index);
+routes.get("/abrir", (req, res) => {
+  res.render("nova.html");
+});
 routes.post("/abrir", OppoController.store);
 
 //routes.post("/likes/:id", LikeController.store);
