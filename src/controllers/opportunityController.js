@@ -41,6 +41,20 @@ class OppoController {
     console.log(opportunity, att);
     return res.render("oportunidade.html", { opportunity, att });
   }
+
+  async update(req, res) {
+    const { id } = req.params;
+
+    const opportunity = await Oppo.findOne({
+      number: id
+    });
+    const att = await Attraction.find({
+      opportunity_number: id
+    });
+
+    console.log(opportunity, att);
+    return res.render("editar.html", { opportunity, att });
+  }
 }
 
 module.exports = new OppoController();

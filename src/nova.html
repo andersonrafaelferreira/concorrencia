@@ -23,18 +23,74 @@
 <main class="container" id="nova">
 
 <div class="columns">
-  <div class="column is-4"></div>
+  <div class="column is-2"></div>
   <div class="column is-8">
 	<h1 class="title">Nova Concorrência</h1>
-		<div class="field is-horizontal">
-			<label class="field-label">Cliente</label>
+		<div class="field">
+			<label class="label">Cliente</label>
 			<div class="field-body control">
 					<input class="input" type="text" placeholder="Cliente">
 			</div>
-	</div>
+		</div>
 
-	<div class="field">
-		<label class="label">Estilo</label>
+
+		<div class="field is-horizontal">
+  		<div class="field-body">
+				
+				<div class="field">
+					<label class="label">Nome</label>
+					<div class="field-body control">
+							<input class="input" type="text" placeholder="Cliente">
+					</div>
+				</div>
+				
+				<div class="field">
+					<label class="label">Telefone</label>
+					<div class="field-body control">
+							<input class="input" type="text" placeholder="Cliente">
+					</div>
+				</div>
+
+				<div class="field">
+					<label class="label">Email</label>
+					<div class="field-body control">
+							<input class="input" type="text" placeholder="Cliente">
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<div class="field is-horizontal">
+  		<div class="field-body">
+				
+				<div class="field">
+					<label class="label">Local</label>
+					<div class="field-body control">
+							<input class="input" type="text" placeholder="Cliente">
+					</div>
+				</div>
+				
+				<div class="field">
+					<label class="label">Cidade</label>
+					<div class="field-body control">
+							<input class="input" type="text" placeholder="Cliente">
+					</div>
+				</div>
+
+				<div class="field">
+					<label class="label">Bairro</label>
+					<div class="field-body control">
+							<input class="input" type="text" placeholder="Cliente">
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+<div class="field is-horizontal">
+  <div class="field-body">
+    <div class="field">
+      <label class="label">Estilo</label>
 		<div class="control">
 			<div class="select">
 				<select id="estilos">
@@ -42,10 +98,9 @@
 				</select>
 			</div>
 		</div>
-	</div>
-
-	<div class="field">
-		<label class="label">Ocasião</label>
+    </div>
+    <div class="field">
+      <label class="label">Ocasião</label>
 		<div class="control">
 			<div class="select">
 				<select id="ocasiao">
@@ -53,45 +108,68 @@
 				</select>
 			</div>
 		</div>
-	</div>
-
-	<div class="field is-horizontal">
-			<label class="field-label">Cachê</label>
-			<div class="field-body control">
-					<input class="input" type="text" placeholder="Digite o valor do cachê">
+    </div>
+    <div class="field">
+      <label class="label">Formação</label>
+		<div class="control">
+			<div class="select" id="">
+				<select id="formacao">
+			<option value="">Selecione</option>
+				</select>
 			</div>
-	</div>
+		</div>
+    </div>
+  </div>
 	
-	
+</div>
 
-	<div class="field is-horizontal">
-			<label class="field-label">Início</label>
-			<div class="field-body control">
-					<input class="input" type="text" placeholder="Digite o horário do Início">
-			</div>
 
-			<label class="field-label">Término</label>
+<div class="field is-horizontal">
+  <div class="field-body">
+		<div class="field">
+				<label class="label">Data</label>
+		<input class="input" type="date" placeholder="Text input">
+		</div>
+
+    <div class="field">
+		<label class="label">Início</label>
+		<div class="field-body control">
+				<input class="input" type="text" placeholder="Digite o horário do Início">
+		</div>
+		</div>
+		<div class="field">
+			<label class="label">Término</label>
 			<div class="field-body control">
 					<input class="input" type="text" placeholder="Digite o horário do Término">
 			</div>
+		</div>
+	
 	</div>
+</div>
 
-	<div class="field is-horizontal">
-			<label class="field-label">Local</label>
-			<div class="field-body control">
-					<input class="input" type="text" placeholder="Digite o Local">
+	
+<div class="field is-horizontal">
+  <div class="field-body">
+
+			<div class="field">
+					<label class="label">Cachê</label>
+					<div class="field-body control">
+							<input class="input" type="text" placeholder="Digite o valor do cachê">
+					</div>
 			</div>
-	</div>
 
-	<div class="field is-horizontal">
-			<label class="field-label">Formação</label>
-			<div class="field-body control">
-					<input class="input" type="text" placeholder="Digite o Formação">
+			<div class="field">
+					<label class="label">Cachê Máximo</label>
+					<div class="field-body control">
+							<input class="input" type="text" placeholder="Digite o valor do cachê máximo">
+					</div>
 			</div>
+
+		</div>
 	</div>
 
-	<div class="field is-horizontal">
-			<label class="field-label">informações adicionais</label>
+	<div class="field">
+			<label class="label">informações adicionais</label>
 			<div class="field-body control">
 					<input class="input" type="text" placeholder="Digite as informações adicionais">
 			</div>
@@ -108,7 +186,7 @@
 			</div>
 	</div> 
 	</div>
-  <div class="column is-4"></div>
+  <div class="column is-2"></div>
 </div>
 
 	 
@@ -119,6 +197,7 @@
 
 <script src="/js/estilos.js"></script>
 <script src="/js/ocasiao.js"></script>
+<script src="/js/formacao.js"></script>
 
 {% include "footer.html" %}
 
