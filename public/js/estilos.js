@@ -232,7 +232,7 @@ let estilos = [
 
 for (i = 0; i < estilos.length; i++) {
   var x = document.createElement("OPTION");
-  x.setAttribute("value", estilos[i]);
+  x.setAttribute("value", estilos[i].attributes.name);
   var t = document.createTextNode(estilos[i].attributes.name);
   x.appendChild(t);
   document.getElementById("estilos").appendChild(x);

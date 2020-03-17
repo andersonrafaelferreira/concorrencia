@@ -25,11 +25,11 @@
 <div class="columns">
   <div class="column is-2"></div>
   <div class="column is-8">
-	<h1 class="title">Nova Concorrência</h1>
+	<h1 class="title">Nova Concorrência <strong id="number">{{lastOne.number + 1}}</strong></h1>
 		<div class="field">
 			<label class="label">Cliente</label>
 			<div class="field-body control">
-					<input class="input" type="text" placeholder="Cliente">
+					<input class="input" type="text" id="client" placeholder="Cliente">
 			</div>
 		</div>
 
@@ -40,21 +40,21 @@
 				<div class="field">
 					<label class="label">Nome</label>
 					<div class="field-body control">
-							<input class="input" type="text" placeholder="Cliente">
+							<input class="input" type="text" id="name" placeholder="Nome">
 					</div>
 				</div>
 				
 				<div class="field">
 					<label class="label">Telefone</label>
 					<div class="field-body control">
-							<input class="input" type="text" placeholder="Cliente">
+							<input class="input" type="text" id="phone" placeholder="(xx) xxxx-xxxx">
 					</div>
 				</div>
 
 				<div class="field">
 					<label class="label">Email</label>
 					<div class="field-body control">
-							<input class="input" type="text" placeholder="Cliente">
+							<input class="input" type="text" id="email" placeholder="Email">
 					</div>
 				</div>
 
@@ -66,21 +66,21 @@
 				<div class="field">
 					<label class="label">Local</label>
 					<div class="field-body control">
-							<input class="input" type="text" placeholder="Cliente">
+							<input class="input" type="text" id="local" placeholder="Local da apresentação">
 					</div>
 				</div>
 				
 				<div class="field">
 					<label class="label">Cidade</label>
 					<div class="field-body control">
-							<input class="input" type="text" placeholder="Cliente">
+							<input class="input" type="text" id="city" placeholder="Cidade">
 					</div>
 				</div>
 
 				<div class="field">
 					<label class="label">Bairro</label>
 					<div class="field-body control">
-							<input class="input" type="text" placeholder="Cliente">
+							<input class="input" type="text" id="zone" placeholder="Bairro">
 					</div>
 				</div>
 
@@ -128,19 +128,19 @@
   <div class="field-body">
 		<div class="field">
 				<label class="label">Data</label>
-		<input class="input" type="date" placeholder="Text input">
+		<input class="input" type="date" id="date" placeholder="Data do evento">
 		</div>
 
     <div class="field">
 		<label class="label">Início</label>
 		<div class="field-body control">
-				<input class="input" type="text" placeholder="Digite o horário do Início">
+				<input class="input" type="time" id="start" placeholder="Digite o horário do Início">
 		</div>
 		</div>
 		<div class="field">
 			<label class="label">Término</label>
 			<div class="field-body control">
-					<input class="input" type="text" placeholder="Digite o horário do Término">
+					<input class="input" type="time" id="end" placeholder="Digite o horário do Término">
 			</div>
 		</div>
 	
@@ -154,14 +154,14 @@
 			<div class="field">
 					<label class="label">Cachê</label>
 					<div class="field-body control">
-							<input class="input" type="text" placeholder="Digite o valor do cachê">
+							<input class="input" type="text" id="min" placeholder="Digite o valor do cachê">
 					</div>
 			</div>
 
 			<div class="field">
 					<label class="label">Cachê Máximo</label>
 					<div class="field-body control">
-							<input class="input" type="text" placeholder="Digite o valor do cachê máximo">
+							<input class="input" type="text" id="max" placeholder="Digite o valor do cachê máximo">
 					</div>
 			</div>
 
@@ -171,7 +171,7 @@
 	<div class="field">
 			<label class="label">informações adicionais</label>
 			<div class="field-body control">
-					<input class="input" type="text" placeholder="Digite as informações adicionais">
+					<input class="input" type="text" id="informations" placeholder="Digite as informações adicionais">
 			</div>
 	</div>
 
@@ -179,10 +179,10 @@
 
 	<div class="field is-grouped">
 			<div class="control">
-					<button class="button is-link">Publicar</button>
+					<button class="button is-link" onclick="publicar()">Publicar</button>
 			</div>
 			<div class="control">
-					<button class="button is-text">Cancelar</button>
+					<button class="button is-text" id="">Cancelar</button>
 			</div>
 	</div> 
 	</div>
@@ -198,6 +198,7 @@
 <script src="/js/estilos.js"></script>
 <script src="/js/ocasiao.js"></script>
 <script src="/js/formacao.js"></script>
+<script src="/js/publish.js"></script>
 
 {% include "footer.html" %}
 

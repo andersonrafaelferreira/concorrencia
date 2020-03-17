@@ -33,7 +33,7 @@ let ocasiao = [
 
 for (i = 0; i < ocasiao.length; i++) {
   var x = document.createElement("OPTION");
-  x.setAttribute("value", ocasiao[i]);
+  x.setAttribute("value", ocasiao[i].attributes.name);
   var t = document.createTextNode(ocasiao[i].attributes.name);
   x.appendChild(t);
   document.getElementById("ocasiao").appendChild(x);

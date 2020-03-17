@@ -83,13 +83,13 @@
 				<h4>Oportunidade nº <strong>{{item.number}}</strong></h4>
 			</div>
 			<div class="article-body">
-				<p><i class="fas fa-microphone-alt"></i> R$ <strong>{{Cache}}</strong></p>	
-				<p><i class="fas fa-money-bill-alt"></i> Banda completa</p>
-				<p><i class="fas fa-map-marker-alt"></i> Vila Olimpia</p>
-				<p><i class="fab fa-itunes-note"></i> Sertanejo</p>
-				<p><i class="fas fa-map-marked-alt"></i> 18:00 às 20:00</p>
-				<p><i class="fas fa-calendar-alt"></i> 21/02/2020</p>
-				<p><i class="fas fa-clock"></i> Casamento</p>
+				<p><i class="fas fa-money-bill-alt"></i> R$ <strong>{{item.min}} - {{item.max}}</strong></p>	
+				<p><i class="fas fa-money-bill-alt"></i> {{item.modality}}</p>
+				<p><i class="fas fa-map-marker-alt"></i> {{item.zone}}</p>
+				<p><i class="fab fa-itunes-note"></i> {{item.genre}}</p>
+				<p><i class="fas fa-map-marked-alt"></i> {{item.start}} às {{item.end}}</p>
+				<p><i class="fas fa-calendar-alt"></i> <input type="date" style="border: none" disabled value="{{item.date}}" id=""></p>
+				<p><i class="fas fa-clock"></i> {{item.occasion}}</p>
 			</div>
 			<div class="article-footer">
 				<button class="button is-warning" onclick="participate({{item.number}})">Participar</button>

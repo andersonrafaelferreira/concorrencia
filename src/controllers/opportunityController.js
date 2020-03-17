@@ -16,13 +16,53 @@ class OppoController {
     // return res.render("abertas.html", { opportunities });
   }
 
+  async last(req, res) {
+    const lastOne = await Oppo.findOne().sort({ field: "asc", number: -1 });
+    return res.render("nova.html", { lastOne });
+    // return res.render("abertas.html", { opportunities });
+  }
+
   async store(req, res) {
-    const { number, status } = req.body;
+    const {
+      number,
+      client,
+      name,
+      email,
+      phone,
+      local,
+      city,
+      zone,
+      estilo,
+      ocasiao,
+      formacao,
+      date,
+      start,
+      end,
+      min,
+      max,
+      informations
+    } = req.body;
 
     console.log(req.body.id);
     const newOppo = await Oppo.create({
       number,
-      status
+      status: "Aberta",
+      client,
+      name,
+      email,
+      phone,
+      local,
+      city,
+      zone,
+      estilo,
+      ocasiao,
+      formacao,
+      date,
+      start,
+      end,
+      min,
+      max,
+      informations
     });
 
     return res.send(newOppo);
