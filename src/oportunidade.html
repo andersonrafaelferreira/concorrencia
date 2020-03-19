@@ -39,11 +39,6 @@ article {
 <body>
 {% include "nav.html" %}
 
-
-
-
-
-
 <main class="container" id="nova">
 
 <div class="columns">
@@ -51,22 +46,77 @@ article {
   <div class="column is-4">
     <div class="lista">
       {% for item in [opportunity] %}
-      <article>
-        <div class="article-header">
-          <h4>Oportunidade nº <strong>{{item.number}}</strong></h4>
-        </div>
-        <div class="article-body">
-          <p><i class="fas fa-microphone-alt"></i> R$ <strong>{{Cache}}</strong></p>	
-          <p><i class="fas fa-money-bill-alt"></i> Banda completa</p>
-          <p><i class="fas fa-map-marker-alt"></i> Vila Olimpia</p>
-          <p><i class="fab fa-itunes-note"></i> Sertanejo</p>
-          <p><i class="fas fa-map-marked-alt"></i> 18:00 às 20:00</p>
-          <p><i class="fas fa-calendar-alt"></i> 21/02/2020</p>
-          <p><i class="fas fa-clock"></i> Casamento</p>
-        </div>
-        <div class="article-footer">
-        </div>
-      </article>
+      <nav class="panel column">
+        <div class="item">
+          <p class="panel-heading">
+          {{item.number}}
+        </p>
+		
+        <a class="panel-block">
+          <span class="panel-icon">
+            <i class="fas fa-money-bill-alt" aria-hidden="true"></i>
+          </span>
+          {{item.min}} - {{item.max}}
+        </a>
+
+        <a class="panel-block">
+          <span class="panel-icon">
+            <i class="fab fa-itunes-note" aria-hidden="true"></i>
+          </span>
+          {{item.genre}}
+        </a>
+
+        <a class="panel-block">
+          <span class="panel-icon">
+            <i class="fas fa-microphone-alt" aria-hidden="true"></i>
+          </span>
+          {{item.modality}}
+        </a>
+        
+        <a class="panel-block">
+          <span class="panel-icon">
+          <i class="far fa-smile" aria-hidden="true"></i>
+          </span>
+          {{item.occasion}}
+        </a>
+        
+        <a class="panel-block">
+          <span class="panel-icon">
+            <i class="fas fa-map-marked-alt" aria-hidden="true"></i>
+          </span>
+          {{item.city}}, {{item.zone}}
+        </a>
+
+        <a class="panel-block">
+          <span class="panel-icon">
+            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+          </span>
+          <input type="date" value="{{item.date}}" disabled />
+        </a>
+
+        <a class="panel-block">
+          <span class="panel-icon">
+            <i class="fas fa-clock" aria-hidden="true"></i>
+          </span>
+          {{item.start}} às {{item.end}}
+        </a>
+
+        <a class="panel-block">
+          <span class="panel-icon">
+            <i class="fas fa-info-circle" aria-hidden="true"></i>
+          </span>
+          {{item.informations}}
+        </a>
+        
+        {# <div class="panel-block">
+          <button class="button is-warning is-fullwidth"
+          onclick="close({{item.number}})"
+          >
+            Fechar
+          </button>
+        </div> #}
+      </div>
+    </nav>
     {% endfor %}
     </div>
   </div>
@@ -77,12 +127,14 @@ article {
         <tr>
           <th><abbr title="Position">Artista</abbr></th>
           <th>Link Eshows</th>
+          <th>Video Youtube</th>
         </tr>
       </thead>
       <tfoot>
         <tr>
           <th><abbr title="Position">Artista</abbr></th>
           <th>Link Eshows</th>
+          <th>Video Youtube</th>
         </tr>
       </tfoot>
       <tbody>
@@ -98,6 +150,13 @@ article {
               <a href="{{ item.url }}" target="_blank">
                 <button class="button is-success">
                   Acessar
+                </button>
+              </a>
+            </td>
+            <td>
+              <a href="{{ item.video }}" target="_blank">
+                <button class="button is-danger">
+                  Youtube
                 </button>
               </a>
             </td>
