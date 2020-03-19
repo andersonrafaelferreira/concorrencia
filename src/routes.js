@@ -66,7 +66,7 @@ const oppos = [
 
 routes.get("/", OppoController.index);
 routes.get("/abertas/:id", OppoController.show);
-routes.get("/abertas/:id/edit", OppoController.update);
+routes.get("/abertas/:id/fechar", OppoController.update);
 routes.post("/", AttractionController.store);
 
 // routes.get("/abrir", (req, res) => {

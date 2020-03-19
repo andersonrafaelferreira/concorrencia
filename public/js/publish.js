@@ -21,6 +21,7 @@ function publicar() {
   console.log(
     "front",
     number,
+    client,
     name,
     email,
     phone,
