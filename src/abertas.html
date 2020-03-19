@@ -51,56 +51,134 @@
 			</div>
 	</div> 
 
-	<h1>{{allOppo}}</h1>
 
 
 <!-- opportunities -->
-
+<div class="container">
 <div class="columns is-multiline" id="oppo">
 
-	{# <article class="column is-3">
-		<div class="article-header">
-			<h4>Concorrencia n <strong>1</strong></h4>
-		</div>
-		<div class="article-body">
-			<p><i class="fas fa-microphone-alt"></i> R$ <strong>{{Cache}}</strong></p>	
-			<p><i class="fas fa-money-bill-alt"></i> Banda completa</p>
-			<p><i class="fas fa-map-marker-alt"></i> Vila Olimpia</p>
-			<p><i class="fab fa-itunes-note"></i> Sertanejo</p>
-			<p><i class="fas fa-map-marked-alt"></i> 18:00 as 20:00</p>
-			<p><i class="fas fa-calendar-alt"></i> 21/02/2020</p>
-			<p><i class="fas fa-clock"></i> Casamento</p>
-		</div>
-		<div class="article-footer">
-			<button class="button is-warning" onclick="participate(1)">Participar</button>
-		</div>
-	</article> #}
 
 	{% for item in opportunities %}
 		{% if item.status !== "Fechada" %}
-			<article class="column is-3">
+			{# <article class="column is-3">
 			<div class="article-header">
 				<h4>Oportunidade nº <strong>{{item.number}}</strong></h4>
 			</div>
 			<div class="article-body">
-				<p><i class="fas fa-money-bill-alt"></i> R$ <strong>{{item.min}} - {{item.max}}</strong></p>	
-				<p><i class="fas fa-money-bill-alt"></i> {{item.modality}}</p>
-				<p><i class="fas fa-map-marker-alt"></i> {{item.zone}}</p>
-				<p><i class="fab fa-itunes-note"></i> {{item.genre}}</p>
-				<p><i class="fas fa-map-marked-alt"></i> {{item.start}} às {{item.end}}</p>
-				<p><i class="fas fa-calendar-alt"></i> <input type="date" style="border: none" disabled value="{{item.date}}" id=""></p>
-				<p><i class="fas fa-clock"></i> {{item.occasion}}</p>
+				<span><i class="fas fa-money-bill-alt"></i> R$ <strong>{{item.min}} - {{item.max}}</strong></span>	
+				<span><i class="fas fa-money-bill-alt"></i> {{item.modality}}</span>
+				<span><i class="fas fa-map-marker-alt"></i> {{item.zone}}</span>
+				<span><i class="fab fa-itunes-note"></i> {{item.genre}}</span>
+				<span><i class="fas fa-map-marked-alt"></i> {{item.start}} às {{item.end}}</span>
+				<span><i class="fas fa-calendar-alt"></i> <input type="date" style="border: none" disabled value="{{item.date}}" id=""></span>
+				<span><i class="fas fa-clock"></i> {{item.occasion}}</span>
 			</div>
 			<div class="article-footer">
 				<button class="button is-warning" onclick="participate({{item.number}})">Participar</button>
 			</div>
-		</article>
+		</article> #}
+	<nav class="panel column is-3">
+		<div class="item">
+			<p class="panel-heading">
+			{{item.number}}
+		</p>
+		
+		<a class="panel-block">
+			<span class="panel-icon">
+				<i class="fas fa-money-bill-alt" aria-hidden="true"></i>
+			</span>
+			{{item.min}} - {{item.max}}
+		</a>
+
+		<a class="panel-block">
+			<span class="panel-icon">
+				<i class="fab fa-itunes-note" aria-hidden="true"></i>
+			</span>
+			{{item.genre}}
+		</a>
+
+		<a class="panel-block">
+			<span class="panel-icon">
+				<i class="fas fa-microphone-alt" aria-hidden="true"></i>
+			</span>
+			{{item.modality}}
+		</a>
+		
+		<a class="panel-block">
+			<span class="panel-icon">
+			<i class="far fa-smile" aria-hidden="true"></i>
+			</span>
+			{{item.occasion}}
+		</a>
+		
+		<a class="panel-block">
+			<span class="panel-icon">
+				<i class="fas fa-map-marked-alt" aria-hidden="true"></i>
+			</span>
+			{{item.city}}, {{item.zone}}
+		</a>
+
+		<a class="panel-block">
+			<span class="panel-icon">
+				<i class="fas fa-calendar-alt" aria-hidden="true"></i>
+			</span>
+			<input type="date" value="{{item.date}}" disabled />
+		</a>
+
+		<a class="panel-block">
+			<span class="panel-icon">
+				<i class="fas fa-clock" aria-hidden="true"></i>
+			</span>
+			{{item.start}} às {{item.end}}
+		</a>
+
+		<a class="panel-block">
+			<span class="panel-icon">
+				<i class="fas fa-info-circle" aria-hidden="true"></i>
+			</span>
+			{{item.informations}}
+		</a>
+		
+		<div class="panel-block">
+			<button class="button is-warning is-fullwidth"
+			onclick="participate({{item.number}})"
+			>
+				Participar
+			</button>
+		</div>
+		</div>
+	</nav>
+		{# <div class="card column is-3">
+  <header class="card-header">
+    <p class="card-header-title">
+      {{item.number}}
+    </p>
+    <a href="#" class="card-header-icon" aria-label="more options">
+      <span class="icon">
+        <i class="fas fa-angle-down" aria-hidden="true"></i>
+      </span>
+    </a>
+  </header>
+  <div class="card-content">
+    <div class="content">
+      <time>{{item.min}} - {{item.max}}</time>
+			<span>{{item.modality}}</span> <br />
+			<span>{{item.city}}</span> <br />
+			<span>{{item.zone}}</span> <br />
+			<span>{{item.genre}}</span> <br />
+      <br>
+			<input type="date" disabled value="{{item.date}}">
+      <time>{{item.start}} - {{item.end}}</time>
+    </div>
+  </div>
+  <footer class="card-footer">
+    <a href="#" class="card-footer-item" onclick="participate({{item.number}})">Participar</a>
+  </footer>
+</div> #}
 		{% endif %}
 	{% endfor %}
-
 	
-		
-
+	</div>
 </div>
 
 </main>
@@ -136,65 +214,9 @@
 </div>
 
 {% include "footer.html" %}
+{% include "modal.html" %}
 
-<div class="modal"> 
-	<div class="modal-background"></div>
-	<div class="modal-card">
-	  <header class="modal-card-head">
-		<p class="modal-card-title">Concorrência <strong id="preview"></strong></p>
-		<button class="delete" aria-label="close" onclick="participate()"></button>
-	  </header>
-	  <section class="modal-card-body">
-		<div class="field">
-			<label class="label">Nome</label>
-			<div class="control">
-			  <input class="input" type="text" value="nome" id="name" name="name" placeholder="Artista/Banda">
-			</div>
-			<p class="help"></p>
-		</div>
-		<div class="field">
-			<label class="label">Email</label>
-			<div class="control">
-			  <input class="input" type="email" value="email@ex.com" id="email" name="email" placeholder="Email">
-			</div>
-			<p class="help"></p>
-		</div>
-		<div class="field">
-			<label class="label">Telefone</label>
-			<div class="control">
-			  <input class="input" type="tel" value="(19)99619-8801" id="phone" name="phone" placeholder="Telefone">
-			</div>
-			<p class="help"></p>
-		</div>
-		<div class="field">
-			<label class="label">Link</label>
-			<div class="control">
-			  <input class="input" type="text" value="https://www.eshows.com.br/artistas/" id="url" name="url" placeholder="https://www.eshows.com.br/artistas/MEU-ARTISTA">
-			</div>
-			<p class="help">
-				<span>Ainda não possui cadastro?<a href="https://artistas.eshows.com.br/cadastro" target="_blank"> Clique aqui!</a></span>
-				<a style="float: right" target="_blank" href="https://www.dropbox.com/s/zi4xe3cddnrd3i7/SEJA%20UM%20ARTISTA%20ESHOWS%21.pdf?dl=0">
-				Tutorial</a>
-			</p>
-		</div>
-		<div class="field">
-			<label class="label">Youtube <span style="font-size: 12px; color: orange">opcional</span></label>
-			<div class="control">
-			  <input class="input" type="text" value="https://www.youtube.com/" id="video" name="video" placeholder="Insira um link do youtube">
-			</div>
-			<p class="help">
-			<span class="icon has-text-info">
-				<i class="fas fa-info-circle"></i>
-			</span>
-			</p>
-		</div>
-	  </section>
-	  <footer class="modal-card-foot">
-		<button class="button is-success" onclick="accept({{item.number}})">Participar</button>
-		<button class="button" onclick="participate(0)">Cancelar</button>
-	  </footer>
-	</div>
-</div>
+
 
 <script>
 

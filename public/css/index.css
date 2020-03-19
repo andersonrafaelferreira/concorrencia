@@ -9,18 +9,18 @@ img {
 }
 
 /* oppo */
-#oppo svg {
+/* #oppo svg {
   color: #cb6012 !important;
   width: 20px;
   margin: 0px 10px;
-}
+} */
 #oppo button {
   margin-top: 10px;
 }
 
-#oppo p {
+/* #oppo p {
   margin-top: 10px;
-}
+} */
 
 #oppo .is-3 .article-body {
   text-align: center;
@@ -90,7 +90,7 @@ img {
 }
 
 /* footer */
-footer {
+#footer {
   text-align: center;
   font-size: 12px;
   color: #333333;
@@ -105,4 +105,28 @@ footer {
 /* main */
 #oppo {
   padding: 100px 0;
+}
+
+/* 
+updates
+ */
+
+.article-body span {
+  display: block;
+}
+
+.panel input {
+  font-size: 15px;
+  color: #000;
+  border: none;
+}
+.panel button {
+  font-weight: bold;
+}
+.panel {
+  box-shadow: none;
+}
+.item {
+  box-shadow: 0px 1px 5px lightgrey;
+  border-radius: 6px;
 }
